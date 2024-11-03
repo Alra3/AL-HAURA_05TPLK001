@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Manajemen Karyawan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block sidebar">
+            <div class="text-center mb-4">
+                <img src="../image/logo.jpg" alt="AL COMPANY" style="width: 50%;">
+                <h5>Welcome</h5>
+                <p>AL HAURA</p>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../index.html">Dashboard</a>
+                </li>
+                <h6 class="text-white mt-4">Menu Karyawan</h6>
+                <li class="nav-item">
+                    <a class="nav-link" href="../karyawan/karyawan.html">Karyawan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../jabatan/jabatan.html">Jabatan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../divisi/divisi.html">Divisi</a>
+                </li>
+                <h6 class="text-white mt-4">Menu Absensi</h6>
+                <li class="nav-item">
+                    <a class="nav-link" href="../absensi/absensi.html">Absensi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../izin/izin.html">Izin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../lembur/lembur.html">Lembur</a>
+                </li>
+                <h6 class="text-white mt-4">Menu Penggajian</h6>
+                <!-- Tambah menu lainnya sesuai kebutuhan -->
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-10 ml-sm-auto px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h2>Sistem Informasi Manajemen Karyawan</h2>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <button class="btn btn-light">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card-box text-center">
+                        <i class="fas fa-users fa-2x text-primary"></i>
+                        <h4 class="mt-2">Data Pegawai</h4>
+                        <p>100</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box text-center">
+                        <i class="fas fa-calendar-check fa-2x text-success"></i>
+                        <h4 class="mt-2">Absensi Hari Ini</h4>
+                        <p>5</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box text-center">
+                        <i class="fas fa-user-check fa-2x text-info"></i>
+                        <h4 class="mt-2">Izin Menunggu Konfirmasi</h4>
+                        <p>15</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box text-center">
+                        <i class="fas fa-business-time fa-2x text-purple"></i>
+                        <h4 class="mt-2">Lembur Menunggu Konfirmasi</h4>
+                        <p>0</p>
+                    </div>
+                </div>
+         </div>
+
+<div class="container mt-5">
+    <h3>Daftar lembur karyawan</h3>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button class="btn btn-primary">+ Tambah Izin Lembur</button>
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Cari Izin Lembur">
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Karyawan</th>
+                <th>Tanggal</th>
+                <th>Jam Lembur Mulai</th>
+                <th>Jam Lembur Berakhir</th>
+                <th>Keperluan Lembur</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Contoh data izin lembur -->
+            <tr>
+                <td>1</td>
+                <td>Al Haura</td>
+                <td>2024-10-11</td>
+                <td>18:00</td>
+                <td>21:00</td>
+                <td>Menunggu Konfirmasi</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Min Yoongi</td>
+                <td>2024-10-12</td>
+                <td>19:00</td>
+                <td>22:00</td>
+                <td>Disetujui</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jeon Jungkook</td>
+                <td>2024-10-13</td>
+                <td>17:30</td>
+                <td>20:30</td>
+                <td>Disetujui</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Zhong Chenle</td>
+                <td>2024-10-14</td>
+                <td>18:30</td>
+                <td>23:00</td>
+                <td>Menunggu Konfirmasi</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Don Lee</td>
+                <td>2024-10-15</td>
+                <td>20:00</td>
+                <td>23:30</td>
+                <td>Menunggu Konfirmasi</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Han So Hee</td>
+                <td>2024-10-16</td>
+                <td>18:00</td>
+                <td>22:00</td>
+                <td>Disetujui</td>
+                <td>
+                    <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Lihat</button>
+                    <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
